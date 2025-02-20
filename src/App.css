@@ -1,32 +1,41 @@
-.main{
+.main {
     width: 100%;
     height: 100vh;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     background-color: #0b87ff;
     display: flex;
     justify-content: center;
     align-items: center;
-
-}
-.to_do_list_main_container{
+  }
+  .to_do_list_main_container {
     width: 380px;
-    height: 500px;
-    border: 1px solid black;
-
-}
-.heading{
+    height: auto;
+    /* border: 1px solid black; */
+  }
+  .heading {
     width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
-    align-items: start;
-    font-size: 1.5rem;
-   
-    font-weight: 700;
+  }
+  h1 {
+    width: 20ch;
     color: white;
-}
-.task_input_main{
-    margin-top: 10px;
+    text-align: center;
+    font-size: 2.2rem;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-shadow: 0px 0px 0px 0px;
+    animation: typing 2s steps(20) infinite alternate-reverse;
+  }
+  @keyframes typing {
+    100% {
+      width: 0ch;
+    }
+  }
+  
+  .task_input_main {
+    margin-top: 20px;
     width: 100%;
     height: 70px;
     /* border: 1px solid black; */
@@ -36,34 +45,34 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
-}
-.input_and_button_main{
+  }
+  .input_and_button_main {
     width: 100%;
     height: 40px;
-
+  
     display: flex;
     justify-content: space-between;
-}
-.input_type{
+  }
+  .input_type {
     width: 75%;
     height: 100%;
+  
     border-bottom: 1px solid rgba(0, 0, 0, 0.402);
-
-}
-.input_type > input{
+  }
+  .input_type > input {
     width: 100%;
     height: 100%;
     border: none;
     outline: none;
     font-size: 1rem;
     font-weight: 600;
-}
-.addtaskbutton{
+    color: rgba(0, 0, 0, 0.63);
+  }
+  .addtaskbutton {
     width: 20%;
     height: 100%;
- 
-}
-.addtaskbutton >button{
+  }
+  .addtaskbutton > button {
     width: 100%;
     height: 100%;
     background-color: #0b87ff;
@@ -72,12 +81,76 @@
     font-size: 1.1rem;
     border-radius: 8px;
     font-weight: 600;
-}
-.task_list_main{
+  }
+  .task_list_main {
     margin-top: 20px;
     width: 100%;
-    height: 300px;
-    border: 1px solid black;
+    height: auto;
+    max-height: 400px;
+    /* border: 1px solid black; */
     background-color: white;
     border-radius: 10px;
-}
+    overflow: scroll;
+  }
+  .task_list_main::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .tast_item {
+    width: 355px;
+    height: 55px;
+    /* margin-top: 5px; */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.402);
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin: 10px;
+  }
+  .list {
+    width: 260px;
+    height: 50px;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    overflow: scroll;
+  }
+  .list::-webkit-scrollbar {
+    display: none;
+  }
+  .list > p {
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.63);
+  }
+  .edit_button_delate_button_main {
+    width: 90px;
+    height: 50px;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .edit_button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0b87ff;
+    cursor: pointer;
+  }
+  
+  .delate_button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(255, 0, 0);
+    cursor: pointer;
+  }
+  .fa-solid {
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.1s ease-in-out;
+  }
+  .fa-solid:hover {
+    transform: scale(1.2);
+  }
